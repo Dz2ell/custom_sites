@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yakurzov FamQ — MajesticRP Denver</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav">
+      <div class="logo">Yakurzov <span>FamQ</span></div>
+      <div class="nav-links">
+        <a href="#about">О семье</a>
+        <a href="#rules">Правила</a>
+        <a href="#join">Заявка</a>
+        <button class="ghost" id="open-auth">Вход / Регистрация</button>
+      </div>
+    </nav>
+    <div class="hero-content">
+      <div>
+        <p class="eyebrow">MajesticRP Denver</p>
+        <h1>Семья Yakurzov FamQ</h1>
+        <p class="subtitle">
+          Уютная и надежная семья для тех, кто ценит дисциплину, стиль и командную игру.
+          Оставь заявку и стань частью нашей истории.
+        </p>
+        <div class="hero-actions">
+          <a class="primary" href="#join">Подать заявку</a>
+          <button class="secondary" id="open-auth-hero">Войти в кабинет</button>
+        </div>
+        <div class="stats">
+          <div>
+            <strong>24/7</strong>
+            <span>Активность</span>
+          </div>
+          <div>
+            <strong>Top-5</strong>
+            <span>Рейтинги</span>
+          </div>
+          <div>
+            <strong>100%</strong>
+            <span>Поддержка</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h3>Приём заявок открыт</h3>
+        <p>Заполни короткую форму и мы свяжемся с тобой в Discord.</p>
+        <form class="quick-form" id="quick-form">
+          <input type="text" name="nickname" placeholder="Никнейм" required />
+          <input type="text" name="discord" placeholder="Discord" required />
+          <button type="submit">Отправить</button>
+        </form>
+        <p class="small">Ответ в течение 24 часов.</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="section">
+      <div class="section-title">
+        <h2>О семье</h2>
+        <p>Yakurzov FamQ — это сообщество игроков, которые ценят уважение, тактику и красоту игры.</p>
+      </div>
+      <div class="cards">
+        <article>
+          <h3>Сильная дисциплина</h3>
+          <p>Чёткие роли, регулярные тренировки и дружеская атмосфера без токсичности.</p>
+        </article>
+        <article>
+          <h3>Свой стиль</h3>
+          <p>Единый визуал семьи, фирменные мероприятия и узнаваемость на сервере.</p>
+        </article>
+        <article>
+          <h3>Поддержка новичков</h3>
+          <p>Поможем адаптироваться, объясним механику и подтянем скилл.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="rules" class="section alt">
+      <div class="section-title">
+        <h2>Кого мы ищем</h2>
+        <p>Нам важно, чтобы каждый участник разделял ценности семьи и был активным.</p>
+      </div>
+      <ul class="requirements">
+        <li>Возраст 16+ (обсуждаем индивидуально).</li>
+        <li>Онлайн от 3 часов в день.</li>
+        <li>Уважительное общение и командная игра.</li>
+        <li>Готовность к тренировкам и семейным ивентам.</li>
+      </ul>
+    </section>
+
+    <section id="join" class="section">
+      <div class="section-title">
+        <h2>Заявка в семью</h2>
+        <p>Заполни расширенную форму, чтобы мы могли познакомиться.</p>
+      </div>
+      <form class="apply-form" id="apply-form">
+        <div class="field">
+          <label for="full-name">Имя и фамилия (в игре)</label>
+          <input id="full-name" name="full-name" type="text" placeholder="Ivan Yakurzov" required />
+        </div>
+        <div class="field">
+          <label for="age">Возраст</label>
+          <input id="age" name="age" type="number" min="14" max="99" placeholder="18" required />
+        </div>
+        <div class="field">
+          <label for="timezone">Часовой пояс</label>
+          <input id="timezone" name="timezone" type="text" placeholder="МСК" required />
+        </div>
+        <div class="field">
+          <label for="experience">Опыт на RP серверах</label>
+          <select id="experience" name="experience" required>
+            <option value="">Выбери</option>
+            <option>Новичок</option>
+            <option>1-2 года</option>
+            <option>3+ года</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="contact">Discord / Telegram</label>
+          <input id="contact" name="contact" type="text" placeholder="@yakurzov" required />
+        </div>
+        <div class="field full">
+          <label for="about-you">Почему хочешь к нам?</label>
+          <textarea id="about-you" name="about-you" rows="4" placeholder="Пару слов о себе" required></textarea>
+        </div>
+        <button type="submit">Отправить заявку</button>
+        <p class="small">Мы не передаем данные третьим лицам.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <strong>Yakurzov FamQ</strong>
+      <p>Семья MajesticRP Denver</p>
+    </div>
+    <div>
+      <p>Контакты: Discord — yakurzov#7777</p>
+      <p>© 2024 Yakurzov FamQ</p>
+    </div>
+  </footer>
+
+  <div class="modal" id="auth-modal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="close" id="close-auth">×</button>
+      <div class="tabs">
+        <button class="tab active" data-tab="login">Вход</button>
+        <button class="tab" data-tab="register">Регистрация</button>
+      </div>
+      <div class="tab-panel active" id="login">
+        <form class="auth-form">
+          <label>
+            Никнейм
+            <input type="text" placeholder="Yakurzov" required />
+          </label>
+          <label>
+            Пароль
+            <input type="password" placeholder="••••••" required />
+          </label>
+          <button type="submit">Войти</button>
+        </form>
+      </div>
+      <div class="tab-panel" id="register">
+        <form class="auth-form">
+          <label>
+            Никнейм
+            <input type="text" placeholder="Yakurzov" required />
+          </label>
+          <label>
+            Discord
+            <input type="text" placeholder="yakurzov#7777" required />
+          </label>
+          <label>
+            Пароль
+            <input type="password" placeholder="••••••" required />
+          </label>
+          <button type="submit">Создать аккаунт</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
